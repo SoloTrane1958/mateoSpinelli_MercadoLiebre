@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3{
+    font-size: 24px;
+    color: #666;
+    margin: 20px 0 20px;
+
+}
+
+p {
+    font-size: 12px;
+}
+
+div.top-header{
+    padding: 5%;
+}
+
+header {
+    background-color:#EAC926;
+}
+
+header div.logo-meli {
+    width: 50%;
+    padding: 10px;
+    
+}
+
+header nav {
+    font-size: 12px;
+    display: none;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header div.top-header p {
+    width: 100%;
+    text-align: initial;
+    margin: 7px 7px 7px 20px;
+}
+
+/*los icons se agrandan creando una clase "icono-grande" y los iconos se cambian de tamaño con font siza */ 
+
+/* Cuerpos de textos 12px que todos los p sean de tamaño doce, los titulares son h3 y para el resto puedo hacer clases   */
+.burger-menu{
+    text-align: center;
+}
+.burger-menu i {
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #0044AA;
+    color: #fff;
+    height: 20px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 32px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+.precios{
+    font-size: 18px
+}
+
+
+.icono-margen{
+    margin-left: 5px ;
+}
+
+.barra-busqueda{
+    background-color: #fff;
+    border: 1px solid #666;
+    outline: none;
+    color: #666;
+    padding: 2px; 
+    border-radius: 3px;
+    width: 57%;
+    font-size: 12px;
+
+}
+
+.search-icon{
+    color: #000;
+    background-color: #ebebeb;
+    border: 1px solid #666;
+    border-radius: 3px;
+    width: 13px;
+    height: 13px;
+    padding: 1px;
+    font-size: 12px;
+    margin: 2px 2px 2px 0;
+
+}
+
+
+/*si le doy click derecho inspeccionar veo que ese div ocupa el ancho totald e la pantalla. Tengo que establecer un widtg maximo de or ejemplo 300 pixeles. Meto el texto en una p y la pe en un div a la que le voy a meter el fondo. */
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+.producto-desc{
+    border: 1px solid #ebebeb;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.product_img{
+    width: 100%;
+}
+
+.descuento{
+    color: #39b54a;
+    font-size: 16px;
+}
+
+.descripcion{
+    color: #666;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 20px;
+    display: none;
+}
+
+.producto-desc i {
+    color:#39b54a;
+}
+
+.camion-icono{
+    border: solid 1px #39b54a;
+    border-radius: 100%;
+    padding: 6px;
+    margin-bottom: 20px;
+    width: 7%;
+    padding: 6px;
+
+}
+
+main section article{
+    margin: 10px 0 10px;
+
+}
+
+footer{
+    background-color: #fff;
+}
+
+footer div article{
+    text-align: center;
+    padding: 30px;
+}
+
+footer div article p{
+    padding: 0 20px;
+}
+
+.beneficios{
+    padding-top: 20px;
+}
+.beneficios_icon{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+#copyright{
+    padding: 20px;
+}
+
+@media (min-width:361px){
+   .descripcion{
+    display: block;
+   }
+
+    .producto{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+   }
+
+   header nav {
+    display: block;
+   }
+
+   div.burguer-menu{
+    display: none;
+   }
+
+}
+
+@media (min-width:769px){
+
+}
