@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Crea tu cuenta</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <header class="main-header">
+            <!--Necesito dos filas-->
+            <div class="top-header">
+                <!--Fila logo, barra y copy-->
+                <div id="contenedor">
+                    <div class="logo-meli">
+                        <a href="/">
+                            <img src="/images/logo-mercado-liebre.svg" alt="">
+                        </a>
+                    </div>
+    
+                    <div class="form-search">
+                        <form class= "search-form" action="/" method="get">
+                            <div class="barra-busqueda">
+                                <input class="buscar" type="search" name="searchbar" placeholder="Buscar productos, marcas">
+                                <div class="search-icon">
+                                    <i class="fa-solid fa-magnifying-glass lupa"></i>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+                
+                <p class="copy-header"><i class="fa-sharp fa-solid fa-hand-holding-dollar icono-margen"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+    
+            </div> 
+            
+            <a href="#" class="burguer-menu">
+                <i class="fas fa-bars"></i>
+            </a>
+            <!--Segunda fila va a ser un nav porque se que va a tener las barras de navegacion-->
+            
+            <nav class="main-navbar">
+                <!--le quiero asignar una clase a cada navbar-->
+                <ul class="left-navbar">
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Tiendas Oficiales</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+    
+                <ul class="right-navbar">
+                    <li><a href="/register">Crea tu cuenta<i class="fa-regular fa-id-card icono-margen"></i></a></li>
+                    <li><a href="/login">Ingresa<i class="fa-solid fa-right-to-bracket icono-margen"></i></a></li>
+                    <li><a href="/views/misCompras.html">Mis compras<i class="fa-solid fa-basket-shopping icono-margen"></i></a></li>
+                </ul>
+    
+            </nav>
+    
+            <!-- Creo un enlace y le voy a dar una class para hacer el boton-->
+    
+        </header>
+    </header>
+    <main>
+        <form action="" method="POST" class="create-form-login">
+            <div class="control-form-login">
+                <label for="">
+                    <input required type="text" name="nombreUsuario" placeholder="Nombre de usuario" class="control-login">
+                </label>
+            </div>
+    
+            <div class="control-form-login">
+                <input required type="text" name="contraseña" placeholder="Elegí tu contraseña" class="control-login">
+            </div>
+    
+            <div class="control-form-login" id="enviar">
+                <input type="submit"></button>
+            </div>
+    </main>
+    <footer>
+        <div class="beneficios">
+            <article>
+                <div class="beneficios_icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <h4>Pagá con tarjeta o en efectivo</h4>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+            </article>
+    
+            <article>
+                <div class="beneficios_icon">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+                <h4>Envío gratis desde $ 2.500</h4>
+                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+            </article>
+    
+            <article>
+                <div class="beneficios_icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h4>Seguridad, de principio a fin</h4>
+                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+    
+            </article>
+        </div>
+
+        <div id="copyright">
+            <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+
+        </div>
+
+
+    </footer>
+
+    </form>
+    
+</body>
+</html>

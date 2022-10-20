@@ -1,6 +1,7 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
@@ -8,74 +9,103 @@ body{
     background-color: #ebebeb;
 }
 
-h3{
-    font-size: 24px;
-    color: #666;
-    margin: 20px 0 20px;
-
-}
-
-p {
-    font-size: 12px;
-}
-
-div.top-header{
-    padding: 5%;
-}
-
-header {
+.main-header {
     background-color:#EAC926;
+    padding: 20px;
+    /* Quiero un poco de espacio a los costados de todos los elementos aplicando un poco de relleno */
 }
 
-header div.logo-meli {
+.burguer-menu {
+    background-color: #03264c;
+    color: #ffffff;
+    /*me interesa que el elemento quede a la mitad y le asigno un ancho maimo para que no ocupe toda la pantalla*/
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+
+.logo-meli {
     width: 50%;
-    padding: 10px;
-    
 }
 
-header nav {
+#contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+
+.copy-header {
+    /*pongo un font-weight de 400 para que no se vea bold */
+    text-align: center;
     font-size: 12px;
+    margin: 30px 0px;
+}
+
+.main-navbar {
     display: none;
 }
 
-header ul li {
-    list-style-type: none;
+.main-navbar ul {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+
+    /*quiero que las listas dentro del main-navbar quiero correr todo a la parte lateral izquieda para lo cual llevo el margen y el padding a 0, eliminando caracteristicas particulares de cualquier lista */
+
 }
 
-header ul li a {
+.main-navbar a{
     text-decoration: none;
-    color: #000;
+    color: #222222;
+    display: inline-block;
+    /*hago esto para poder ponerle un poco de relleno arriba y abajo */
+    padding: 5px 0;
+    font-size: 17px;
+    display: inline-block;
 }
 
-header div.top-header p {
-    width: 100%;
-    text-align: initial;
-    margin: 7px 7px 7px 20px;
+.search-icon{
+    color: #666;
+    border-radius: 3px;
+    width: 18px;
+    padding: 6px;
+    font-size: 12px;
+    margin: 2px 2px 2px 0;
+    display: inline-block;
+    position:absolute;
+    right:0;
+    top:0;
 }
 
-/*los icons se agrandan creando una clase "icono-grande" y los iconos se cambian de tamaño con font siza */ 
 
-/* Cuerpos de textos 12px que todos los p sean de tamaño doce, los titulares son h3 y para el resto puedo hacer clases   */
-.burger-menu{
-    text-align: center;
+.barra-busqueda{
+    display: inline-block;
+    position:relative;
+
 }
-.burger-menu i {
-    font-size: 20px;
-    border-radius: 5px;
-    background-color: #0044AA;
-    color: #fff;
-    height: 20px;
-    margin: 10px 0px 20px 0px;
-    padding: 10px;
-    width: 32px;
+
+.buscar{
+    background-color: #fff;
+    outline: none;
+    color: #666;
+    padding: 6px; 
+    border-radius: 3px;
+    font-size: 12px;
+    display: inline-block;
+    border-style: none;
 }
 
 section.banner img{
     width: 100%;
 }
 
+
 .precios{
-    font-size: 18px
+    font-size: 18px;
+    flex-grow: 0.3;
 }
 
 
@@ -83,33 +113,6 @@ section.banner img{
     margin-left: 5px ;
 }
 
-.barra-busqueda{
-    background-color: #fff;
-    border: 1px solid #666;
-    outline: none;
-    color: #666;
-    padding: 2px; 
-    border-radius: 3px;
-    width: 57%;
-    font-size: 12px;
-
-}
-
-.search-icon{
-    color: #000;
-    background-color: #ebebeb;
-    border: 1px solid #666;
-    border-radius: 3px;
-    width: 13px;
-    height: 13px;
-    padding: 1px;
-    font-size: 12px;
-    margin: 2px 2px 2px 0;
-
-}
-
-
-/*si le doy click derecho inspeccionar veo que ese div ocupa el ancho totald e la pantalla. Tengo que establecer un widtg maximo de or ejemplo 300 pixeles. Meto el texto en una p y la pe en un div a la que le voy a meter el fondo. */
 
 main {
     width: 90%;
@@ -120,8 +123,13 @@ main {
     border: 1px solid #ebebeb;
     padding: 15px;
     background-color: #fff;
+    position: relative;
 }
 
+.precio-descuento {
+    display: flex;
+    align-items: center;
+}
 .product_img{
     width: 100%;
 }
@@ -129,6 +137,7 @@ main {
 .descuento{
     color: #39b54a;
     font-size: 16px;
+    flex-grow: 0.7;
 }
 
 .descripcion{
@@ -136,20 +145,34 @@ main {
     font-size: 16px;
     font-weight: normal;
     margin-top: 20px;
-    display: none;
+    opacity: 0;
+    transition: opacity 450ms;
 }
 
+.descripcion:hover{
+    opacity: 1;
+}
 .producto-desc i {
     color:#39b54a;
+    transition: all 450ms;
 }
 
-.camion-icono{
+.producto-desc i:hover{
+    transform: rotate(-90deg);
+}
+
+main section article i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
     border: solid 1px #39b54a;
-    border-radius: 100%;
-    padding: 6px;
-    margin-bottom: 20px;
-    width: 7%;
-    padding: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 
 }
 
@@ -174,36 +197,240 @@ footer div article p{
 .beneficios{
     padding-top: 20px;
 }
+
 .beneficios_icon{
     font-size: 2em;
     margin-bottom: 10px;
     color: #1259c3;
+    transition: color 450ms;
 }
+
+.beneficios_icon:hover{
+
+    color: #0022AA;
+    
+}
+
 
 #copyright{
     padding: 20px;
 }
 
-@media (min-width:361px){
-   .descripcion{
+
+.form-titulo {
+    font-weight: bold;
+}
+
+.form-search{
+    margin: auto;
+}
+
+.create-form{
+    padding: 20px 35px;
+}
+
+
+.control-formulario{
+    margin: 15px 0;  
+}
+
+
+.control-formulario label{
+    margin-bottom: 20px;
     display: block;
-   }
+}
 
-    .producto{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+.control{
+    width: 100%;
+    padding: 8px 8px;
+    border-radius: 6px;
+    border-style: none;
+    margin: 20px 0px;
+}
 
-   }
+.mb-5{
+    margin-bottom: 5px;
+}
+
+.create-form-login{
+    padding: 1% 18%;
+}
+
+.control-form-login{
+    margin: 50px 20px;
+}
+
+.control-login{
+    width: 100%;
+    padding: 15px 8px;
+    border-radius: 6px;
+    border-style: none;
+    font-size: 16px;
+}
+
+#enviar input{
+    width: 100%;
+    padding: 15px 8px;
+    border-radius: 6px;
+    border-style: none;
+    background-color: #1259c3;
+    color: #fff;
+    transition: all 450ms;
+    font-size: 16px;
+}
+#enviar input:hover{
+    background-color: #0022AA;
+
+}
+
+.perfilOpciones{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0px;
+}
+
+.div-op{
+    display: flex;
+}
+
+.div-op label{
+    margin:0 5px;
+}
+
+.interesesOpciones{
+    padding-left: 17px;
+}
+.interesesOpciones label{
+    margin-bottom: 30px;
+}
+
+.interesesOpciones input{
+    margin-right: 20px;
+}
+
+
+/*Breakpoints tablet */
+
+@media (min-width:481px) {
+
+    .top-header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo-meli{
+        width: 30%;
+    }
+
+    #contenedor{
+        display: contents;
+    }
+
+    .barra-busqueda {
+        width: 100%;
+    }
+
+    .buscar{
+        width: 100%;
+    }
+
+    .form-search{
+        flex-grow: 0.6;
+    }
+
+    .copy-header{
+        flex-grow: 0.1;
+    }
+
+    .producto {
+        width: 45%;
+        transition: box-shadow 450ms;
+    }
+
+    .productos {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    .copy-header{
+        max-width: 350px;
+    }
+
+
+    .producto:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    }
 
    header nav {
     display: block;
    }
 
-   div.burguer-menu{
-    display: none;
-   }
+   .burguer-menu {
+     display: none;
+    }
+
+    .main-navbar{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li{
+        margin: 0 5px;
+    }
 
 }
 
-@media (min-width:769px){
+@media (min-width:1200px) {
 
+    .producto {
+        width: 22%;
+    }
+
+    .logo-meli{
+        width: 30%;
+    }
+
+    .top-header{
+        max-width: 1200px;
+        margin: auto;
+
+    }
+    
+    .main-navbar{
+        max-width: 1200px;
+    }
+
+    .top-header{
+        align-items: center;
+        /*alineo los elementos en funcion del eje transversal*/
+
+    }
+
+    .copy-header{
+        max-width: none;
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0%;
+    }
+
+    .main-navbar li{
+        margin: 0 10px;
+    }
+
+    .main-navbar a{
+        margin: 0 10px;
+        font-size: 19px;
+    }
+
+    .beneficios{
+        display: flex;
+    }
 }

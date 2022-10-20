@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu cuenta</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="create-form">
+        <form action="" method="POST">
+        
+            <input type="text" name="nombreApellido" placeholder="Nombre y Apellido" class="control">
+                
+    
+            <input required type="text" name="userName" placeholder="Nombre de usuario" class="control">
+
+    
+            <input required type="text" name="nombreUsuario" placeholder="Nombre de usuario"
+            class="control mb-5">
+               
+    
+            <div class="control-formulario">
+                <label for="fechaNacimiento" class="form-titulo">Fecha de nacimiento</label>
+                <input required type="date" name="fechaNacimiento" id="fechaNacimiento"
+                class="control">
+            </div>
+    
+            <div class="control-formulario">
+                <label>
+                    <input required type="text" name="domicilio" placeholder="Domicilio"
+                    class="control mb-5">
+                </label>
+            </div>
+    
+            <div class="control-formulario">
+                <label for="perfilUsuario" class="form-titulo">Perfil del usuario
+                </label>
+    
+                <div class="perfilOpciones">
+                    <div class="div-op">
+                        <input type="radio" name="perfilUsuario" value="comprador" id="perfilUsuario">
+                        <label for="perfilUsuario">Comprador</label>
+                    </div>
+                    <div class="div-op">
+                        <input type="radio" name="perfilUsuario" value="vendedor" id="perfilUsuario2">
+                        <label for="perfilUsuario2">Vendedor</label>
+                    </div>
+
+    
+                </div>
+    
+            </div>
+    
+            <div class="control-formulario">
+    
+                <label for="intereses" class="form-titulo">Intereses</label>
+    
+                <div class="interesesOpciones">
+                    <label>
+                        <input type="checkbox" name="intereses" value="electro">Electro
+                    </label>
+            
+                    <label>
+                        <input type="checkbox" name="intereses" value="moda">Moda
+                    </label>
+            
+                    <label>
+                        <input type="checkbox" name="intereses" value="hogar">Hogar
+                    </label>
+        
+                    <label>
+                        <input type="checkbox" name="intereses" value="jugueteria">Jugueteria
+                    </label>
+        
+                    <label>
+                        <input type="checkbox" name="intereses" value="vidaSana">Vida sana
+                    </label>
+    
+                </div>
+    
+            
+            </div>
+    
+        </form>
+    </div>
+</body>
+</html>

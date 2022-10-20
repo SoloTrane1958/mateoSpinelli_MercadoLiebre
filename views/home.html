@@ -12,43 +12,59 @@
     
 </head>
 <body>
-    <header>
+    <!--Creo un header dentro del body al cual le asigno la clase "main-header"-->
+    <header class="main-header">
+        <!--Necesito dos filas-->
         <div class="top-header">
-            <div class="logo-meli">
-                <img src="/images/logo-mercado-liebre.svg" alt="Logo Mercado Libre">
-            </div>
-            <div >
-                <div class="barra-busqueda">
-                    Buscar productos, marcas
+            <!--Fila logo, barra y copy-->
+            <div id="contenedor">
+                <div class="logo-meli">
+                    <a href="/">
+                        <img src="/images/logo-mercado-liebre.svg" alt="">
+                    </a>
+                    
                 </div>
-                <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div> 
+
+                <div class="form-search">
+                    <form class= "search-form" action="/" method="get">
+                        <div class="barra-busqueda">
+                            <input class="buscar" type="search" name="searchbar" placeholder="Buscar productos, marcas">
+                            <div class="search-icon">
+                                <i class="fa-solid fa-magnifying-glass lupa"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
             </div>
             
-            <p><i class="fa-sharp fa-solid fa-hand-holding-dollar icono-margen"></i> Compra en cuotas y sin tarjeta de credito</p>
+            <p class="copy-header"><i class="fa-sharp fa-solid fa-hand-holding-dollar icono-margen"></i>Comprá en cuotas y sin tarjeta de crédito</p>
 
-        </div>
-
-        <nav>
-            <ul>
+        </div> 
+        
+        <a href="#" class="burguer-menu">
+            <i class="fas fa-bars"></i>
+        </a>
+        <!--Segunda fila va a ser un nav porque se que va a tener las barras de navegacion-->
+        
+        <nav class="main-navbar">
+            <!--le quiero asignar una clase a cada navbar-->
+            <ul class="left-navbar">
                 <li><a href="#">Ofertas</a></li>
                 <li><a href="#">Tiendas Oficiales</a></li>
                 <li><a href="#">Vender</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
 
-            <ul>
-                <li><a href="/views/creaTuCuenta.html">Crea tu cuenta<i class="fa-regular fa-id-card icono-margen"></i></a></li>
-                <li><a href="/views/ingresa.html">Ingresa<i class="fa-solid fa-right-to-bracket icono-margen"></i></a></li>
+            <ul class="right-navbar">
+                <li><a href="/register">Crea tu cuenta<i class="fa-regular fa-id-card icono-margen"></i></a></li>
+                <li><a href="/login">Ingresa<i class="fa-solid fa-right-to-bracket icono-margen"></i></a></li>
                 <li><a href="/views/misCompras.html">Mis compras<i class="fa-solid fa-basket-shopping icono-margen"></i></a></li>
             </ul>
 
         </nav>
 
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
+        <!-- Creo un enlace y le voy a dar una class para hacer el boton-->
 
     </header>
 
@@ -66,8 +82,11 @@
                         <div class="camion-icono">
                             <i class="fas fa-truck"></i>
                         </div>
-                        <p class="precios">$6.770</p>
-                        <p class="descuento">40% off</p>
+
+                        <div class="precio-descuento">
+                            <p class="precios">$6.770</p>
+                            <p class="descuento">40% off</p>
+                        </div>
                         <h4 class="descripcion">Cafetera Moulinex</h4>
                     </div>
 
@@ -79,19 +98,25 @@
                         <div class="camion-icono">
                             <i class="fas fa-truck"></i>
                         </div>
-                        <p class="precios">$230.000</p> <!--Elementos tipo block va una abajo de la otra, corresponde todo al mismo articulo entonces va todo adentro-->
-                        <p class="descuento">20% off</p>
+                        <div class="precio-descuento">
+                            <p class="precios">$6.770</p>
+                            <p class="descuento">40% off</p>
+                        </div>
                         <h4 class="descripcion">MacBook Pro 2019</h4>
                     </div>
                 </article>
+
                 <article class="producto">
                     <img src="/images/img-samsung-galaxy-s10.jpg" alt="imagen del Samsung Galaxy" class="product_img">
                     <div class="producto-desc">
                         <div class="camion-icono">
                             <i class="fas fa-truck"></i>
                         </div>
-                        <p class="precios">$70.500</p>
-                        <p class="descuento">10% off</p>
+
+                        <div class="precio-descuento">
+                            <p class="precios">$70.500</p>
+                            <p class="descuento">10% off</p>
+                        </div>
                         <h4 class="descripcion">Samsung Galaxy S10</h4>
                     </div>
                 </article>
@@ -101,8 +126,11 @@
                         <div class="camion-icono">
                             <i class="fas fa-truck"></i>
                         </div>
-                        <p class="precios">$23.200</p>
-                        <p class="descuento">5% off</p>
+
+                        <div class="precio-descuento">
+                            <p class="precios">$23.200</p>
+                            <p class="descuento">5% off</p>
+                        </div>
                         <h4 class="descripcion">SmartTv Samsung 43"</h4>
                     </div>
                 </article>
@@ -119,8 +147,10 @@
                         <div class="camion-icono">
                             <i class="fas fa-truck"></i>
                         </div>
-                        <p class="precios">$6.770</p>
-                        <p class="descuento">40% off</p>
+                        <div class="precio-descuento">
+                            <p class="precios">$6.770</p>
+                            <p class="descuento">40% off</p>
+                        </div>                      
                         <h4 class="descripcion">Cafetera Moulinex</h4>
                     </div>
                 </article>
@@ -130,8 +160,10 @@
                         <div class="camion-icono">
                             <i class="fas fa-truck"></i>
                         </div>
-                        <p class="precios">$230.000</p>
-                        <p class="descuento">20% off</p>
+                        <div class="precio-descuento">
+                            <p class="precios">$230.000</p>
+                            <p class="descuento">20% off</p>
+                        </div>
                         <h4 class="descripcion">MacBook Pro 2019</h4>
                     </div>
                 </article>
@@ -141,8 +173,12 @@
                         <div class="camion-icono">
                             <i class="fas fa-truck"></i>
                         </div>
-                        <p class="descuento">$75.000</p>
-                        <p class="precios">20% off</p>
+
+                        <div class="precio-descuento">
+                            <p class="precios">$75.000</p>
+                            <p class="descuento">20% off</p>
+                        </div>
+
                         <h4 class="descripcion">Samsung Galaxy S10 </h4>
                     </div>
                 </article>
@@ -152,8 +188,11 @@
                         <div class="camion-icono">
                             <i class="fas fa-truck"></i>
                         </div>
-                        <p class="descuento">$23.200</p>
-                        <p class="precios">5% off</p>
+
+                        <div class="precio-descuento">
+                            <p class="precios">$23.200</p>
+                            <p class="descuento">5% off</p>
+                        </div>
                         <h4 class="descripcion">SmartTv Samsung 43"</h4>
                     </div>
                 </article>
